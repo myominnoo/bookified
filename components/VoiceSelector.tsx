@@ -27,6 +27,7 @@ const VoiceSelector = ({
           <div className="voice-selector-options">
             {voiceCategories.male.map((voiceId) => {
               const voice = voiceOptions[voiceId as keyof typeof voiceOptions];
+              if (!voice) return null; // Skip if voice details are missing
               const isSelected = value === voiceId;
               return (
                 <Label

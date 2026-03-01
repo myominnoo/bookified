@@ -41,6 +41,15 @@ const UploadForm = () => {
 
   const onSubmit = async (data: BookUploadFormValues) => {
     setIsSubmitting(true);
+    try {
+      // TODO:: Implement actual submission logic here.
+      console.log("Form Data:", data);
+    } catch (error) {
+      console.error("Error during submission:", error);
+      // TODO: handle error
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
